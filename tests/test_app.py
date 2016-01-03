@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # Default app tests
 
-from app import app
+from app import APP
 import pytest
 import json
 import unittest
@@ -11,7 +11,7 @@ class FlaskTestCase(unittest.TestCase):
 
 	# Test default route
 	def test_default_route(self):  
-		tester = app.test_client(self)
+		tester = APP.test_client(self)
 		response = tester.get('/', content_type='application/json')
 
 		# Check 200 response from default route
