@@ -7,6 +7,7 @@ itsdangerous==0.24
 Jinja2==2.8
 lazy-object-proxy==1.2.1
 MarkupSafe==0.23
+pep8==1.6.2
 py==1.4.31
 pylint==1.5.2
 pytest==2.8.5
