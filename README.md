@@ -23,3 +23,5 @@ sudo apt-get install python3-pip
 sudo pip3 install virtualenv
 virtualenv myvenv
 ```
+
+update: `virtualenv -p python3 myvenv` also failing, falling back to 2.7 `virtualenv myvenv`
