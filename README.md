@@ -8,13 +8,13 @@ Sample app to test out Jenkins
 * `py.test --junitxml=output.xml` : run pytest with XML output
 * `pylint app.py` : run pylint against .py 
 
-## Ubuntu 14:04 pvenv bug
+## Ubuntu 14:04 install
 
-There is a bug in the 14:04 venv install. To use python3 virtualenvironment
+14:04 venv install. To use python3 virtualenvironment
 
 ```
-sudo apt-get install python-virtualenv
-virtualenv -p python3 myvenv
+sudo apt-get install python3.4-venv
+python3 -m venv myvenv
 ```
 or 
 
