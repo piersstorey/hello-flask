@@ -37,7 +37,7 @@ python3 -m venv myvenv
 * `supervisorctl reread`
 * `supervisorctl update`
 * `supervisorctl start hello-flask-gunicorn`
-* `cp /var/www/hello-flask/scripts/hello-world/hello-flask-nginx.conf /etc/nginx/conf.d/`
+* `cp /var/www/hello-flask/scripts/hello-flask-nginx.conf /etc/nginx/conf.d/`
 * `/etc/init.d/nginx reload`
 
 

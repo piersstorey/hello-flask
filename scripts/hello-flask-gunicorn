@@ -29,7 +29,7 @@ source $VENVDIR/bin/activate
 
 # Execute gunicorn
 echo "executing gunicorn"
-exec gunicorn app:app \
+exec gunicorn app:APP \
 	--name $NAME \
 	--workers $NUM_WORKERS \
 	--bind=127.0.0.1:8100
