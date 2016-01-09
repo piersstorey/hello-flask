@@ -1,0 +1,35 @@
+#!/bin/bash
+# Bash script for running python virtual environment and starting gunicorn
+
+
+###############################
+##      Global Variables     ##
+###############################
+
+
+NUM_WORKERS=3 				     		# Number of workers to spawn
+
+
+###############################
+##      Start Upload API     ##
+###############################
+
+# Declare APP variables
+NAME="hello-flask"					# Name of the application
+APPDIR=/var/www/hello-flask			# Application directory
+VENVDIR=/var/www/hello-flask/myvenv	# Virtual environment directory
+
+# Write starting to console
+echo "Starting $NAME flask app"
+
+# Activate the virtual environment
+echo "Setting virtual env"
+cd $APPDIR
+source $VENVDIR/bin/activate
+
+# Execute gunicorn
+echo "executing gunicorn"
+exec gunicorn app:app \
+	--name $NAME \
+	--workers $NUM_WORKERS \
+	--bind=127.0.0.1:8100
