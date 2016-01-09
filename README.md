@@ -33,7 +33,7 @@ python3 -m venv myvenv
 * `pip install -r requirements.txt`
 * `cp /var/www/hello-flask/scripts/hello-flask-gunicorn /bin/`
 * `sudo chmod u+x /bin/hello-flask-gunicorn`
-* `cp /var/www/hello-flask/scripts/hello-flask-gunicorn.conf /etc/supervisord/conf.d/`
+* `cp /var/www/hello-flask/scripts/hello-flask-gunicorn.conf /etc/supervisor/conf.d/`
 * `supervisorctl reread`
 * `supervisorctl update`
 * `supervisorctl start hello-flask-gunicorn`
