@@ -21,18 +21,19 @@ python3 -m venv myvenv
 
 * `sudo apt-get install git`
 * `sudo apt-get install python3`
-* 'sudo apt-get install python3.4-venv'
+* `sudo apt-get install python3.4-venv`
 * `sudo apt-get install supervisor`
 * `mkdir /var/www`
 * `sudo chown -R www-data:www-data /var/www `
 * `sudo chmod 775 /var/www`
 * `cd /var/www`
 * `git clone git@github.com:piersstorey/hello-flask.git`
-* `cd hello-world`
-* `cp /var/www/hello-world/scripts/hello-world-gunicorn /bin/hello-world-gunicorn`
-* 'sudo chmod u+x /bin/hello-world-gunicorn'
-* `cp /var/www/hello-world/scripts/hello-world-gunicorn.conf /etc/supervisord/conf.d/`
+* `cd hello-flask`
 * `python3 -m venv myvenv`
+* `pip install -r requirements.txt`
+* `cp /var/www/hello-world/scripts/hello-world-gunicorn /bin/hello-world-gunicorn`
+* `sudo chmod u+x /bin/hello-world-gunicorn`
+* `cp /var/www/hello-world/scripts/hello-world-gunicorn.conf /etc/supervisord/conf.d/`
 * `supervisorctl reread`
 * `supervisorctl update`
 * `supervisorctl start hello-world-gunicorn`
