@@ -31,13 +31,13 @@ python3 -m venv myvenv
 * `cd hello-flask`
 * `python3 -m venv myvenv`
 * `pip install -r requirements.txt`
-* `cp /var/www/hello-world/scripts/hello-world-gunicorn /bin/hello-world-gunicorn`
-* `sudo chmod u+x /bin/hello-world-gunicorn`
-* `cp /var/www/hello-world/scripts/hello-world-gunicorn.conf /etc/supervisord/conf.d/`
+* `cp /var/www/hello-flask/scripts/hello-flask-gunicorn /bin/`
+* `sudo chmod u+x /bin/hello-flask-gunicorn`
+* `cp /var/www/hello-flask/scripts/hello-flask-gunicorn.conf /etc/supervisord/conf.d/`
 * `supervisorctl reread`
 * `supervisorctl update`
-* `supervisorctl start hello-world-gunicorn`
-* `cp /var/www/hello-world/scripts/hello-world/hell-world.conf /etc/nginx/conf.d/`
+* `supervisorctl start hello-flask-gunicorn`
+* `cp /var/www/hello-flask/scripts/hello-world/hello-flask-nginx.conf /etc/nginx/conf.d/`
 * `/etc/init.d/nginx reload`
 
 
