@@ -1,0 +1,17 @@
+#!/bin/bash
+
+PYENV_HOME=$WORKSPACE/.myvenv/
+
+# Delete previously built virtualenv
+if [ -d $PYENV_HOME ]; then
+    rm -rf $PYENV_HOME
+fi
+
+# Create virtualenv and install packages
+python3 -m venv $PYENV_HOME
+. $PYENV_HOME/bin/activate
+pip install --quiet -r requirements.txt
+
+# Tests, style and violations checker
+py.test --junitxml=output.xml
+pylint -f parseable app.py | tee pylint.out
