@@ -1,6 +1,7 @@
 #!/bin/bash
 
-PYENV_HOME=$WORKSPACE/.myvenv
+# PYENV_HOME=$WORKSPACE/.myvenv
+PYENV_HOME=$WORKSPACE/myvenv
 
 # Delete previously built virtualenv
 if [ -d $PYENV_HOME ]; then
