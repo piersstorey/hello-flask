@@ -14,5 +14,5 @@ pip install -r requirements.txt
 
 # Tests, style and violations checker
 py.test --junitxml=output.xml
-pylint -f parseable app.py | tee pylint.out
-pep8 app.py > pep8_report.txt
+#pylint -f parseable app.py | tee pylint.out
+#pep8 app.py > pep8_report.txt
