@@ -8,6 +8,7 @@ Sample app to test out Jenkins
 * `py.test --cov` : run pytest including coverage
 * `py.test --junitxml=output.xml` : run pytest with XML output
 * `pylint app.py` : run pylint against .py 
+* `ssh-copy-id user@123.45.56.78` : Copy public ssh key to allowed_host in target deployment web server
 
 ## Ubuntu 14:04 venv install
 
